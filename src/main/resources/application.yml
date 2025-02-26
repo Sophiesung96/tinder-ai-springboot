@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: tinder-ai-backend
+  ai:
+    openai:
+      api-key: ${SPRING_AI_OPENAPI_KEY}
+
