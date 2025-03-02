@@ -3,10 +3,7 @@ package com.sophie.api.tinderaibackend.conversations;
 import com.sophie.api.tinderaibackend.conversations.dto.ConversationRequestDto;
 import com.sophie.api.tinderaibackend.profiles.ProfileRepository;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
@@ -40,6 +37,15 @@ public class ConversationController {
        conversationRepository.save(conversation);
        return conversation;
     }
+
+    @GetMapping("/conversations/{conversationId}")
+    public Conversation getConversation(@PathVariable String conversationId){
+        Conversation conversation=conversationRepository.findById(conversationId)
+                .orElseThrow(()-> new ResponseStatusException(HttpStatus.NOT_FOUND,
+                        "Unable to find conversation with this ID: " + conversationId));
+                return conversation;
+    }
+
 
     @PostMapping("/conversations/{conversationId}")
     public Conversation addMessageToConversation(@PathVariable String conversationId, @Valid @RequestBody ChatMessage chatMessage){
