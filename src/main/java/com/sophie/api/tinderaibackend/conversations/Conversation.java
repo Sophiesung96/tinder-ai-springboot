@@ -1,5 +1,7 @@
 package com.sophie.api.tinderaibackend.conversations;
 
+import lombok.Builder;
+
 import java.util.List;
 
 public record Conversation (

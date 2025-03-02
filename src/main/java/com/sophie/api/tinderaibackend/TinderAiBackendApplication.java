@@ -9,9 +9,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TinderAiBackendApplication implements CommandLineRunner {
-    @Autowired
-    ProfileRepository profileRepository;
+public class TinderAiBackendApplication  {
+
     public static void main(String[] args) {
 
 
@@ -19,20 +18,6 @@ public class TinderAiBackendApplication implements CommandLineRunner {
 
     }
 
-    public void run (String... args) throws Exception {
-       Profile profile = new Profile(
-               "1",
-               "Koushik",
-               "KOthgal",
-               40,
-               "Indian",
-               Gender.MALE,
-               "Software Developer",
-               "foo.jpg",
-               "INTP"
-       );
-       profileRepository.save(profile);
-       profileRepository.findAll().forEach(System.out::println);
-    }
+
 
 }
