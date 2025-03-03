@@ -1,4 +1,4 @@
-package io.javabrains.tinderaibackend.matches;
+package com.sophie.api.tinderaibackend.matches;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 

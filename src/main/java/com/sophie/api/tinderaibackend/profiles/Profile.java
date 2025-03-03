@@ -1,8 +1,6 @@
 package com.sophie.api.tinderaibackend.profiles;
 
-import org.springframework.data.annotation.Id;
-
-public record Profile (
+public record Profile(
         String id,
         String firstName,
         String lastName,
@@ -11,5 +9,6 @@ public record Profile (
         Gender gender,
         String bio,
         String imageUrl,
-        String myerBriggsPersonalType
-){}
+        String myersBriggsPersonalityType
+) {
+}

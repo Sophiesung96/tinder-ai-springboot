@@ -1,4 +1,4 @@
-package io.javabrains.tinderaibackend;
+package com.sophie.api.tinderaibackend;
 
 import java.util.ArrayList;
 import java.util.List;

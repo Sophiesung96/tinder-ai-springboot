@@ -1,9 +1,9 @@
-package io.javabrains.tinderaibackend.matches;
+package com.sophie.api.tinderaibackend.matches;
 
-import io.javabrains.tinderaibackend.conversations.Conversation;
-import io.javabrains.tinderaibackend.conversations.ConversationRepository;
-import io.javabrains.tinderaibackend.profiles.Profile;
-import io.javabrains.tinderaibackend.profiles.ProfileRepository;
+import com.sophie.api.tinderaibackend.conversations.Conversation;
+import com.sophie.api.tinderaibackend.conversations.ConversationRepository;
+import com.sophie.api.tinderaibackend.profiles.Profile;
+import com.sophie.api.tinderaibackend.profiles.ProfileRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
